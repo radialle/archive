@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Syenite</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="init()">
+	<div id="menu">
+		<select name="effect" id="effect" onchange="applyEffect()">
+			<option value="none">None</option>
+			<option value="redChannelDisplacement">Red Channel Displacement</option>
+			<option value="greenChannelDisplacement">Green Channel Displacement</option>
+			<option value="blueChannelDisplacement">Blue Channel Displacement</option>
+			<option value="copyGreenToRed">Copy Green to Red</option>
+			<option value="copyBlueToRed">Copy Blue to Red</option>
+			<option value="copyRedToGreen">Copy Red to Green</option>
+			<option value="copyBlueToGreen">Copy Blue to Green</option>
+			<option value="copyRedToBlue">Copy Red to Blue</option>
+			<option value="copyGreenToBlue">Copy Green to Blue</option>
+			<option value="removeRedChannel">Remove Red Channel</option>
+			<option value="removeGreenChannel">Remove Green Channel</option>
+			<option value="removeBlueChannel">Remove Blue Channel</option>
+			<option value="redChannelOnly">Red Channel Only</option>
+			<option value="greenChannelOnly">Green Channel Only</option>
+			<option value="blueChannelOnly">Blue Channel Only</option>
+			<option value="redToAlpha">Red to Alpha</option>
+			<option value="greenToAlpha">Green to Alpha</option>
+			<option value="blueToAlpha">Blue to Alpha</option>
+			<option value="grayscale">Grayscale</option>
+		</select>
+		<div class="right">
+			<label for="file-input">
+				<div class="button open" onclick="openFile()">
+					<i class="fa fa-folder-open-o"></i>
+				</div>
+			</label>
+			<a class="button save" download="image.png">
+				<i class="fa fa-floppy-o"></i>
+			</a>
+		</div>
+	</div>
+	<div id="main">
+		<canvas></canvas>
+	</div>
+	<input id="file-input" type="file" />
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

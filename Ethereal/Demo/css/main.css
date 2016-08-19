@@ -1,0 +1,149 @@
+body {
+	background:#2c3e50;
+	font-family: "Source Sans Pro", sans-serif;
+	cursor:default;
+	-webkit-user-select:none;
+}
+#main {
+	position:absolute;
+	top:0; left:0; right:0; bottom:0;
+}
+
+#main .message {
+	position:absolute;
+	bottom:30px; left:0; right:0;
+	text-align:center;
+	color:red;
+}
+
+#main .box {
+	position:absolute;
+	background:rgba(0,0,0,.4);
+	width:200px;
+}
+#main .box form {
+	margin:0;
+}
+#main .location label {
+	float:left;
+	line-height:22px;
+	width:35px;
+	font-size:14px;
+	color:rgb(255,255,255);
+}
+#main .box input {
+	outline:none;
+	font-size:16px;
+	font-family: "Source Sans Pro", sans-serif;
+}
+#main .box .content {
+	padding:10px;
+	overflow:hidden;
+}
+#main .box .title {
+	padding:5px 10px;
+	background:rgba(0,0,0,.4);
+	color:rgb(255,255,255);
+}
+#main .time-date {
+	bottom:108px; 
+	right:5px;
+}
+#main .time-date input[type='time'],
+#main .time-date input[type='date'] {
+	width:180px;
+	margin-bottom:5px;
+}
+#main .time-date label {
+	color:rgb(255,255,255);
+	font-size:14px;
+}
+#main .location {
+	bottom:5px;
+	right:5px;
+}
+#main .location input {
+	width:48px;
+	float:left;
+	border:none;
+	border-right:solid 1px rgb(200,200,200);
+	margin-bottom:5px;
+	text-align:center;
+}
+#main .location .content {
+	padding-bottom:5px;
+}
+#main .results {
+	bottom:5px;
+	left:5px;
+}
+#main .results .content {
+	font-size:11px;
+	color:rgb(255,255,255);
+	font-family:monospace;
+}
+
+#main .wheel {
+	position:absolute;
+	top:50%; left:50%;
+	margin-top:-150px;
+	margin-left:-150px;
+	width:300px;
+	height:300px;
+	border-radius:50%;
+	z-index:2;
+	border:solid 2px rgba(255,255,255,.6);
+}
+#main .wheel .inner-ring-container {
+	position:absolute;
+	top:calc(50% - 150px);
+	left:calc(50% - 150px);
+	width:300px;
+	height:300px;
+	border-radius:50%;
+	overflow:hidden;
+}
+#main .wheel .inner-ring {
+	position:absolute;
+	height:300px; width:300px;
+	-webkit-filter:blur(10px);
+	-webkit-transform: scale(1.09) translate3d(0, 0, 0);
+	z-index:1;
+}
+
+
+#main .wheel .point-container {
+	position:absolute;
+	top:50%; left:-15px; right:-15px;
+	height:10px;
+	margin-top:-5px;
+	z-index:2;
+}
+#main .wheel .point {
+	width:10px;
+	height:10px;
+	border-radius:5px;
+	background:rgb(255,255,255);
+	transition:background .5s ease-in-out;
+}
+
+@-webkit-keyframes disable {
+	from {
+		transform:scale(1);
+		-webkit-filter:grayscale(0);
+	}
+	to {
+		transform:scale(.9);
+		-webkit-filter:grayscale(1);
+	}
+}
+@-webkit-keyframes enable {
+	from {
+		transform:scale(.9);
+		-webkit-filter:grayscale(1);
+	}
+	to {
+		transform:scale(1);
+		-webkit-filter:grayscale(0);
+	}
+}

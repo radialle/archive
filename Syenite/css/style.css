@@ -1,0 +1,56 @@
+body {
+	margin:0;
+	-webkit-font-smoothing:antialiased;
+}
+#menu {
+	height:40px;
+	background:rgb(60,60,60);
+	box-shadow:0 2px 0 rgb(50,50,50);
+}
+#menu .button {
+	float:left;
+	color:rgba(255,255,255,.6);
+	line-height:40px;
+	font-size:22px;
+	cursor:pointer;
+	padding:3px 10px;
+}
+#menu .button:hover {
+	color:rgba(255,255,255,1);
+}
+#menu .right {
+	float:right;
+}
+#main {
+	position:absolute;
+	top:42px; left:0; right:0; bottom:0;
+	overflow:auto;
+}
+#effect {
+	font-size:16px;
+	width:250px;
+	line-height:40px;
+	height:40px;
+	padding:0 10px;
+	border:none;
+	border-radius:0;
+	background: rgb(80,80,80) url('../img/arrow.png') no-repeat 98%;
+	color:rgb(255,255,255);
+	outline:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+}
+#effect option {
+	background:rgb(255,255,255);
+	color:rgb(0,0,0);
+}
+#file-input {
+	display:none;
+}
+canvas {
+	position:absolute;
+	top:50%;
+	left:50%;
+	background:rgb(255,255,255);
+}
